@@ -13,16 +13,20 @@ var whatWeDoRouter = require("./app_server/routes/whatwedo");
 var whoWeAreRouter = require("./app_server/routes/whoweare");
 var usersRouter = require("./app_server/routes/users");
 
-var handlebars = require('hbs');
+// engine to support automatic layouts
+const { engine } = require("express-handlebars");
 
 var app = express();
 
-// view engine setup
-app.set("views", path.join(__dirname, "app_server", "views"));
-app.set("view engine", "hbs");
+app.engine("hbs", engine({
+  extname: ".hbs",
+  defaultLayout: "layout",
+  layoutsDir: path.join(__dirname, "app_server", "views", "layouts"),
+  partialsDir: path.join(__dirname, "app_server", "views", "partials")
+}));
 
-// register handlebars partials (https://www.npmjs.com/package/hbs)
-handlebars.registerPartials(__dirname + '/app_server/views/partials');
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "app_server", "views"));
 
 app.use(logger("dev"));
 app.use(express.json());
