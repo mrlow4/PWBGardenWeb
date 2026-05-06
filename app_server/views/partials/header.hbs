@@ -8,11 +8,15 @@
 }
 
 #logo {
-    border-radius: 25px;
-    margin: auto;
+  border-radius: 25px;
+  margin: auto;
 }
 
 ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.25rem, 2vw, 3rem);
   border-radius: 25px;
   width: fit-content;
   list-style-type: none;
@@ -39,12 +43,16 @@ li a:hover {
   opacity: 1;
   background-color: #506629;
 }
+
+nav {
+  padding: 16px;
+}
 </style>
 
 <body style="background-color: #d3c578";>
 <div id="header">
                 <div id="logo">
-					<a href="/"><img src="images/gardenlogo.png" alt="Paij Wadley Bailey Community Garden" height="125" width="463.66"></a>
+					<a href="/"><img class="center-image" src="images/gardenlogo.png" alt="Paij Wadley Bailey Community Garden" height="125" width="463.66"></a>
 				</div>
 				<nav id="navigation">
 					<ul>
