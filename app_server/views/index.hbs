@@ -1,39 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.wrapper {
-  margin:auto;
-  display: grid;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  grid-template:
-    "a b" auto
-    ". c" 2ch;
-}
-.item1 {
-  grid-area: a;
-}
-.item2 {
-  grid-area: b;
-}
-.item3 {
-  grid-area: c;
-}
-</style>
 <body>
     <h1>{{title}}</h1>
     <p>Welcome to {{title}}</p>
-    <div class="wrapper">
-        <div class="item1">
-            {{> textboxMD}}
-        </div>
-        <div class="item2">
-            {{> textboxSM}}
-        </div>
-        <div class="item3">
-            {{> textboxSM}}
-        </div>
+    <div class="main-page">
+      <div class="box" style="grid-area: box1"></div>
+      <div class="box" style="grid-area: box2"></div>
+      <div class="box" style="grid-area: box3"></div>
     </div>
 </body> 
 </html>

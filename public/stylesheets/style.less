@@ -18,3 +18,17 @@ a {
   display: block;
   margin: 2rem auto;
 }
+
+.box{
+  background-color: #1e290a;
+}
+
+.main-page {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  gap: 1em;
+  grid-template-areas:
+    "box1 box1 box2"
+    "box1 box1 box3";
+}
