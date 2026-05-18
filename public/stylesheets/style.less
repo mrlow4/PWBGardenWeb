@@ -27,6 +27,13 @@ a {
   margin: 2rem auto;
 }
 
+.image-container > img {
+  object-fit: fill;
+  max-width: 100%;
+  max-height: 100%;
+  
+}
+
 .box{
   background-color: #1e290a;
 }
@@ -48,5 +55,15 @@ a {
     "box1 box1"
     "box1 box1"
     "box2 box3";
+  }
+}
+@media(max-width: 24em){
+  .main-page {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas:
+    "box1"
+    "box2"
+    "box3"
   }
 }
