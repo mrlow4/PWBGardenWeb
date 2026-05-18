@@ -1,2 +1,54 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<div class="donation-layout">
+    <div class="donation-container">
+    <form id="donation-form">
+        <h2>Join Our Newsletter</h2>
+        
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="name" required placeholder="Jane Doe">
+        
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="jane@example.com">
+        
+        <button type="submit" class="submit-btn">Subscribe</button>
+    </form>
+    </div>
+    <div class="donation-container">
+    <form id="donation-form">
+        <h2>Make a Donation</h2>
+{{!--   TODO: Find out if we need this form, or if a link to the givebutter page is enough
+
+    ###############################
+        POTENTIALLY USEFUL FORM
+    ###############################
+
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="name" required placeholder="Jane Doe">
+        
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="jane@example.com">
+        
+        <div class="amount-options">
+        <p>Select Amount ($)</p>
+        <button type="button" class="amt-btn active" data-value="10">$10</button>
+        <button type="button" class="amt-btn" data-value="25">$25</button>
+        <button type="button" class="amt-btn" data-value="50">$50</button>
+        <button type="button" class="amt-btn" data-value="100">$100</button>
+        </div>
+        
+        <label for="custom-amount">Custom Amount</label>
+        <input type="number" id="custom-amount" name="amount" min="1" step="0.01" placeholder="Enter other amount">
+        
+        <button type="submit" class="submit-btn">Donate Now</button>
+
+--}}
+        <p class="text-style">At Paij's Garden we believe that building collective power starts with food. Join us as we build up our community</p>
+        <p class="text-style">Grow our resilience, and create the supportive space Black and Brown Vermonters need to reconnect to the land and grow nourishing food.</p>
+        <p class="text-style">Help us cover the cost of seeds, gardening materials, soil, access to land, and stipends for our members so we can grow organic produce, make medicine, and host educational and community building events!</p>
+        
+        <a href="https://givebutter.com/donate-to-paijs-garden-ygq06n" class="submit-btn donate-link">Donate Now</a>
+    </form>
+    </div>
+</div>
