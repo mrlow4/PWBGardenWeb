@@ -70,3 +70,103 @@ img {
     "box3"
   }
 }
+
+// Donation and Join Page
+
+// TODO: remove unused classes if donation form in joindonate.hbs is un-needed9
+// SEE: app_server/views/joindonate.hbs:22
+
+.donation-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #d3c578;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: "Lucida Grande",Helvetica,Arial,sans-serif;
+}
+
+.donation-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.donation-container {
+  flex: 1;
+}
+
+#donation-form h2 { text-align: center; color: #333; }
+label { display: block; margin: 15px 0 5px; font-weight: bold; }
+
+input[type="text"], input[type="email"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; // so padding doesn't affect width
+}
+
+.amount-options { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+
+.amt-btn {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #1e290a;
+  background: white;
+  color: #1e290a;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.amt-btn.active, .amt-btn:hover {
+  background: #f7e99f;
+  color: #1e290a;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+  background: #4f6b25;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover { background: #1e290a; }
+
+.donate-link {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  text-align: center;
+  text-decoration: none;
+
+  background-color: #4f6b25;
+  color: white;
+
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.text-style {
+    letter-spacing: 0;
+    font-family: sofia-pro, sans-serif;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1e290a;
+}
+
+@media (max-width: 800px) {
+  .donation-layout {
+    flex-direction: column;
+  }
+}
